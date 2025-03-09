@@ -30,8 +30,8 @@ vim.opt.mouse = 'a'
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
   pattern = "*.py",
   callback = function()
-    vim.opt.textwidth = 79
-    vim.opt.colorcolumn = "79"
+    vim.opt.textwidth = 179
+    vim.opt.colorcolumn = "179"
   end
 }) -- python formatting
 

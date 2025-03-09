@@ -2,7 +2,7 @@ require("obsidian").setup({
   workspaces = {
     {
         name = "ZazenCodes",
-        path = "D:\\Nextcloud\\Notes",
+        path = "/home/gudvin/Nextcloud/Notes",
       },
   },
   notes_subdir = "inbox",
@@ -11,7 +11,7 @@ require("obsidian").setup({
 
   disable_frontmatter = true,
   templates = {
-      subdir = "templates",
+      subdir = "Templates",
       date_format = "%Y-%m-%d",
       time_format = "%H:%M:%S",
   },
@@ -53,6 +53,9 @@ require("obsidian").setup({
     nvim_cmp = true,
     min_chars = 2,
   },
+  follow_url_func = function(url)
+    vim.fn.jobstart({"xdg-open", url})
+  end,
   ui = {
     -- Disable some things below here because I set these manually for all Markdown files using treesitter
     checkboxes = { },

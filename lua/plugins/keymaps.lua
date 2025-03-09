@@ -29,3 +29,10 @@ vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 -- Git status (must be inside git directory)
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+-- Python debugger
+-- vim.keymap.set("n", "<leader>dt", ":DapUiToggle<cr>")
+vim.keymap.set("n", "<leader>db", ":DapToggleBreakpoint<cr>")
+vim.keymap.set("n", "<leader>dx", ":DapTerminate<cr>")
+vim.keymap.set("n", "<leader>dc", ":DapContinue<cr>")
+vim.keymap.set("n", "<leader>dpr", ":lua require('dap-python').test_method()<cr>")
