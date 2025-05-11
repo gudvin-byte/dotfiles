@@ -22,6 +22,7 @@ return {
     },
     config = function()
       require("lspconfig").marksman.setup({})
+      require("lspconfig").pyright.setup({})
     end,
   },
 }
