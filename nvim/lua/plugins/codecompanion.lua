@@ -6,6 +6,15 @@ return {
         chat = {
           adapter = "gemini",
           model = "gemini-2.5-flash",
+          tools = {
+            groups = {
+              ["files"] = {
+                opts = {
+                  collapse_tools = false,
+                },
+              },
+            },
+          },
         },
         inline = {
           adapter = {

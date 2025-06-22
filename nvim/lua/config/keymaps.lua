@@ -5,6 +5,8 @@ local map = LazyVim.safe_keymap_set
 map("n", "<leader>o", "<cmd>Outline<cr>", { desc = "Toggle Outline" })
 map("n", "<leader>fo", "<cmd>FzfLua files cwd=$OBSIDIAN_VAULT<cr>", { desc = "Find Obsidian" })
 map("n", "<leader>so", "<cmd>FzfLua live_grep_native cwd=$OBSIDIAN_VAULT<cr>", { desc = "Grep Obsidian" })
+map("n", "<leader>aa", "<cmd>CodeCompanionActions<cr>", { desc = "CodeCompanion Actions" })
+map("n", "<leader>at", "<cmd>CodeCompanionChat Toggle<cr>", { desc = "CodeCompanion Toggle" })
 
 -- Custom keymaps for markdown files
 vim.api.nvim_create_autocmd("FileType", {
@@ -14,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.keymap.set("n", "gd", function()
       vim.lsp.buf.definition()
     end, { buffer = true, desc = "Follow markdown link" })
-    
+
     -- Add additional key for following links
     vim.keymap.set("n", "<leader>gf", function()
       vim.lsp.buf.definition()
