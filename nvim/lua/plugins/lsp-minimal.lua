@@ -23,6 +23,7 @@ return {
     config = function()
       require("lspconfig").marksman.setup({})
       require("lspconfig").pyright.setup({})
+      require("lspconfig").lua_ls.setup({})
     end,
   },
 }
