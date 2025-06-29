@@ -1,7 +1,10 @@
 return {
   "saghen/blink.cmp",
-  keymap = {
-    ["<C-y"] = { "select_and_accept" },
-    ["<CR>"] = { "fallback" },
+  opts = {
+    keymap = {
+      preset = "default",
+      -- ["<C-o"] = { "select_and_accept" },
+      -- ["<CR>"] = false,
+    },
   },
 }

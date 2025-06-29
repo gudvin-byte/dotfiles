@@ -24,6 +24,7 @@ return {
       require("lspconfig").marksman.setup({})
       require("lspconfig").pyright.setup({})
       require("lspconfig").lua_ls.setup({})
+      require("lspconfig").dockerls.setup({})
     end,
   },
 }
